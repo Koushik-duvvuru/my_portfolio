@@ -1,4 +1,3 @@
-// Custom Cursor
 const cursor = document.querySelector('.cursor');
 const cursorFollower = document.querySelector('.cursor-follower');
 const links = document.querySelectorAll('a');
@@ -6,8 +5,7 @@ const buttons = document.querySelectorAll('button');
 
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    
+    cursor.style.top = e.clientY + 'px';    
     setTimeout(() => {
         cursorFollower.style.left = e.clientX + 'px';
         cursorFollower.style.top = e.clientY + 'px';
@@ -36,7 +34,6 @@ buttons.forEach(button => {
     });
 });
 
-// Typing Animation
 const typedTextSpan = document.querySelector('.typed-text');
 const textArray = ['Web Developer', 'Student in VIT', 'Student from CPS', 'Problem Solver'];
 const typingDelay = 100;
@@ -71,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, newTextDelay + 250);
 });
 
-// Sticky Header
 const header = document.querySelector('header');
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
@@ -85,7 +81,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile Menu
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     nav.classList.toggle('active');
@@ -119,19 +114,14 @@ window.addEventListener('DOMContentLoaded', () => {
     sr.reveal('.contact-form', { delay: 200 });
 });
 
-// Project Filtering
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectItems = document.querySelectorAll('.project-item');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
         button.classList.add('active');
-        
         const filterValue = button.getAttribute('data-filter');
-        
         projectItems.forEach(item => {
             if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                 item.style.display = 'block';
@@ -150,39 +140,27 @@ filterButtons.forEach(button => {
     });
 });
 
-// Form Submission
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Get form values
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
     
-    // Here you would typically send the form data to a server
-    // For demonstration, we'll just log it to the console
     console.log('Form submitted:', { name, email, subject, message });
     
-    // Show success message (you can customize this)
     alert('Thank you for your message! I will get back to you soon.');
-    
-    // Reset form
     contactForm.reset();
 });
 
-// Add ScrollReveal library
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if ScrollReveal is not loaded
     if (typeof ScrollReveal === 'undefined') {
-        // Create script element
         const script = document.createElement('script');
         script.src = 'https://unpkg.com/scrollreveal';
         script.async = true;
-        
-        // Append to document
         document.body.appendChild(script);
     }
 });
