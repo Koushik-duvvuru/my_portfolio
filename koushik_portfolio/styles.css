@@ -1,4 +1,3 @@
-/* Base Styles */
 :root {
     --primary-color: #6c63ff;
     --secondary-color: #f50057;
@@ -138,7 +137,6 @@ body{
     cursor: default;
 }
 
-/* Header */
 header {
     position: fixed;
     top: 0;
@@ -209,7 +207,6 @@ nav ul li a.active::after {
     transition: var(--transition);
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
@@ -368,7 +365,6 @@ nav ul li a.active::after {
     }
 }
 
-/* Typing Animation */
 .typed-text {
     color: var(--primary-color);
     font-weight: 600;
@@ -387,7 +383,6 @@ nav ul li a.active::after {
     }
 }
 
-/* About Section */
 .about-content {
     display: flex;
     align-items: center;
@@ -433,7 +428,8 @@ nav ul li a.active::after {
 .info-value {
     color: var(--text-light);
 }
-/* Skills Section */
+
+
 .skills {
     padding: 60px 0;
     background-color: #f9f9f9;
@@ -464,7 +460,8 @@ nav ul li a.active::after {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
-/* Projects Section */
+
+
 .projects {
     padding: 60px 0;
     background-color: #fff;
@@ -540,7 +537,7 @@ nav ul li a.active::after {
     color: white;
 }
 
-/* Contact Section */
+
 .contact {
     padding: 60px 0;
     background-color: #f9f9f9;
